@@ -1,8 +1,11 @@
 #include <string>
+#include <fstream>
 #include "Heart_Rate.cpp"
 
 int main(){
-
+		
+		std::ofstream outfile;
+		outfile.open ("Heart_Rates_Output.text");
 		int MaxHR,AgeVal;
 	
 		std::string DateofBirth,TargetHR,NAME;
@@ -26,7 +29,10 @@ int main(){
 		std::cout<<"First Name: "<<SENDinfo.setFirstName()<<std::endl;
 		std::cout<<"Last Name:  "<<SENDinfo.setLastName()<<std::endl;
 		std::cout<<"Date of Birth: "<<SENDinfo.setDateOfBirth()<<std::endl;
-
+		
+		outfile<<"First: "<<SENDinfo.setFirstName()<<std::endl;
+		outfile<<"Last: "<<SENDinfo.setLastName()<<std::endl;
+		outfile<<"Date of Birth: "<<SENDinfo.setDateOfBirth()<<std::endl;
 		AgeVal = SENDinfo.getAge();
 		
 		MaxHR = SENDinfo.getMaximumHeartRate(AgeVal);
