@@ -37,10 +37,14 @@ int main(){
 		
 		MaxHR = SENDinfo.getMaximumHeartRate(AgeVal);
 		std::cout<<"Max Heartrate: "<<MaxHR<<std::endl;
+	
+		outfile<<"Max Heartrate:  "<<MaxHR<<std::endl;
 		
 		TargetHR = SENDinfo.getTargetHeartRate(MaxHR);
 		std::cout<<"Target Heart Rate: "<<TargetHR<<std::endl; 
 
+		outfile<<"Target Heart Rate:  "<<TargetHR<<std::endl;
+		
 
 		
 		return 0;
